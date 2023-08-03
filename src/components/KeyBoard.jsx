@@ -45,12 +45,15 @@ function KeyBoard() {
   };
 
   const handleKeyUp = (e) => {
+    e.preventDefault();
     const keyId = e.code.toLowerCase();
 
     removeStyle(keyId);
   };
 
   const handleKeyDown = (e) => {
+    e.preventDefault();
+
     console.log(`{ name:'${e.key}', altName:'', code:'${e.code}' }`);
 
     const keyId = e.code.toLowerCase();
