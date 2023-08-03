@@ -1,4 +1,27 @@
-export const row0 = [
+export const rowF0 = [{ name: "Esc", altName: "", code: "Escape" }];
+
+export const rowF1 = [
+  { name: "F1", altName: "", code: "F1" },
+  { name: "F2", altName: "", code: "F2" },
+  { name: "F3", altName: "", code: "F3" },
+  { name: "F4", altName: "", code: "F4" },
+];
+
+export const rowF2 = [
+  { name: "F5", altName: "", code: "F5" },
+  { name: "F6", altName: "", code: "F6" },
+  { name: "F7", altName: "", code: "F7" },
+  { name: "F8", altName: "", code: "F8" },
+];
+
+export const rowF3 = [
+  { name: "F9", altName: "", code: "F9" },
+  { name: "F10", altName: "", code: "F10" },
+  { name: "F11", altName: "", code: "F11" },
+  { name: "F12", altName: "", code: "F12" },
+];
+
+export const rowM0 = [
   { name: "`", altName: "~", code: "Backquote" },
   { name: "1", altName: "!", code: "Digit1" },
   { name: "2", altName: "@", code: "Digit2" },
@@ -15,7 +38,7 @@ export const row0 = [
   { name: "Backspace", altName: "", code: "Backspace" },
 ];
 
-export const row1 = [
+export const rowM1 = [
   { name: "Tab", altName: "", code: "Tab" },
   { name: "Q", altName: "", code: "KeyQ" },
   { name: "W", altName: "", code: "KeyW" },
@@ -32,7 +55,7 @@ export const row1 = [
   { name: "\\", altName: "|", code: "Backslash" },
 ];
 
-export const row2 = [
+export const rowM2 = [
   { name: "Caps", altName: "", code: "CapsLock" },
   { name: "A", altName: "", code: "KeyA" },
   { name: "S", altName: "", code: "KeyS" },
@@ -48,7 +71,7 @@ export const row2 = [
   { name: "Enter", altName: "", code: "Enter" },
 ];
 
-export const row3 = [
+export const rowM3 = [
   { name: "Shift", altName: "", code: "ShiftLeft" },
   { name: "Z", altName: "", code: "KeyZ" },
   { name: "X", altName: "", code: "KeyX" },
@@ -63,7 +86,7 @@ export const row3 = [
   { name: "Shift", altName: "", code: "ShiftRight" },
 ];
 
-export const row4 = [
+export const rowM4 = [
   { name: "Ctrl", altName: "", code: "ControlLeft" },
   { name: "Win", altName: "", code: "MetaLeft" },
   { name: "Alt", altName: "", code: "AltLeft" },

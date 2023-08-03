@@ -1,6 +1,16 @@
 import React, { useEffect, useState } from "react";
 import KeyRow from "./KeyRow";
-import { row0, row1, row2, row3, row4 } from "../assets/keyRows";
+import {
+  rowF0,
+  rowF1,
+  rowF2,
+  rowF3,
+  rowM0,
+  rowM1,
+  rowM2,
+  rowM3,
+  rowM4,
+} from "../assets/keyRows";
 
 function KeyBoard() {
   const initialState = [{ name: "Tab", code: "Tab" }];
@@ -60,12 +70,21 @@ function KeyBoard() {
 
   return (
     <div className="flex center h-screen">
-      <div className="flex gap-2 flex-col">
-        <KeyRow row={row0} />
-        <KeyRow row={row1} />
-        <KeyRow row={row2} />
-        <KeyRow row={row3} />
-        <KeyRow row={row4} />
+      <div className="left flex flex-col gap-4">
+        <div className="function flex gap-2 justify-between">
+          <KeyRow row={rowF0} />
+          <KeyRow row={rowF1} />
+          <KeyRow row={rowF2} />
+          <KeyRow row={rowF3} />
+        </div>
+
+        <div className="main flex gap-2 flex-col">
+          <KeyRow row={rowM0} />
+          <KeyRow row={rowM1} />
+          <KeyRow row={rowM2} />
+          <KeyRow row={rowM3} />
+          <KeyRow row={rowM4} />
+        </div>
       </div>
     </div>
   );
