@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import KeyRow from "./KeyRow";
+
+import { rowLF0, rowLF1, rowLF2, rowLF3 } from "../assets/keyRowsLeft";
+import { rowLM0, rowLM1, rowLM2, rowLM3, rowLM4 } from "../assets/keyRowsLeft";
+import { rowM0, rowM1, rowM2, rowM3, rowM4 } from "../assets/keyRowsMid";
 import {
-  rowF0,
-  rowF1,
-  rowF2,
-  rowF3,
-  rowM0,
-  rowM1,
-  rowM2,
-  rowM3,
-  rowM4,
-} from "../assets/keyRows";
+  rowR0,
+  rowR1,
+  rowR2,
+  rowR3,
+  rowR4,
+  rowR5,
+  rowR6,
+} from "../assets/keyRowsRight";
 
 function KeyBoard() {
   const initialState = [{ name: "Tab", code: "Tab" }];
@@ -54,7 +56,9 @@ function KeyBoard() {
   const handleKeyDown = (e) => {
     e.preventDefault();
 
-    console.log(`{ name:'${e.key}', altName:'', code:'${e.code}' }`);
+    console.log(
+      `{ name:'${e.key}', altName:'', code:'${e.code}', grow:false }`
+    );
 
     const keyId = e.code.toLowerCase();
 
@@ -73,20 +77,66 @@ function KeyBoard() {
 
   return (
     <div className="flex center h-screen">
+      {/* Left Side */}
       <div className="left flex flex-col gap-4">
         <div className="function flex gap-2 justify-between">
-          <KeyRow row={rowF0} />
-          <KeyRow row={rowF1} />
-          <KeyRow row={rowF2} />
-          <KeyRow row={rowF3} />
+          <KeyRow row={rowLF0} />
+          <KeyRow row={rowLF1} />
+          <KeyRow row={rowLF2} />
+          <KeyRow row={rowLF3} />
         </div>
 
         <div className="main flex gap-2 flex-col">
+          <KeyRow row={rowLM0} />
+          <KeyRow row={rowLM1} />
+          <KeyRow row={rowLM2} />
+          <KeyRow row={rowLM3} />
+          <KeyRow row={rowLM4} />
+        </div>
+      </div>
+
+      {/* Mid Section */}
+      <div className="right ml-4">
+        <div className="top mb-4">
           <KeyRow row={rowM0} />
+        </div>
+        <div className="mid flex flex-col gap-2 text-sm">
           <KeyRow row={rowM1} />
           <KeyRow row={rowM2} />
-          <KeyRow row={rowM3} />
-          <KeyRow row={rowM4} />
+        </div>
+        <div className="bottom mt-14 flex flex-col gap-2">
+          <div className="upArrow center">
+            <KeyRow row={rowM3} />
+          </div>
+          <div className="restArrow center">
+            <KeyRow row={rowM4} />
+          </div>
+        </div>
+      </div>
+
+      {/* Right Side */}
+          <div className="right ml-4 flex flex-col gap-2">
+              <div className="indicators">
+                  
+              </div>
+        <div className="top">
+          <KeyRow row={rowR0} />
+        </div>
+        <div className="bottom flex">
+          <div className="left flex flex-col gap-2">
+            <div className="mid-numbers flex flex-col gap-2">
+              <KeyRow row={rowR1} />
+              <KeyRow row={rowR2} />
+              <KeyRow row={rowR3} />
+            </div>
+            <div className="bottom-numbers">
+              <KeyRow row={rowR4} />
+            </div>
+          </div>
+          <div className="right flex flex-col ml-2 gap-2 justify-between">
+            <KeyRow row={rowR5} />
+            <KeyRow row={rowR6} />
+          </div>
         </div>
       </div>
     </div>
